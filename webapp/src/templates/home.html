@@ -1,6 +1,6 @@
-<div ng-app="films" class="main">
+<div ng-app="films" class="home">
     <div ng-controller="HomeCtrl">
-        <form ng-init=init()>
+        <form ng-init=init() class="text-center">
             Titulo: <input type="text" ng-model="filmTitle"> 
             Tipo:
             <select>
@@ -11,13 +11,12 @@
             <select>
                 <option ng-repeat="plot in plotsLength" ng-model="filmPlot">{{plot}}</option>
             </select>
-            <button type="submit" ng-click="buscarFilms()">Buscar</button>
+            <button type="submit" ng-click="buscarFilms()" class="btn btn-sm btn-secondary">Buscar</button>
         </form>
 
         <p>{{filmsFound[0].title}}</p>
         <hr>
-        <div ng-show="filmsFound && filmsFound.imdbID">
-            <h3>Resultados</h3>
+        <div ng-show="filmsFound && filmsFound.imdbID" class="col-md-12">
             <film-details-list films="filmsFound"></film-details-list>
         </div>
     </div>

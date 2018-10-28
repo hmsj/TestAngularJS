@@ -1,9 +1,40 @@
-<div ng-app="films">
+<div ng-app="films" class="col-md-12 row">
+    <div class="col-md-4">
+        <img ng-src="{{films.Poster}}">
 
-
-    <div class="well col-md-12">Title: {{films.Title}}</div>
-    <div>Year: {{films.Year}}</div>
-    <div>Actors: {{films.Actors}}</div>
-    <div>Genre: {{films.Genre}}</div>
+    </div>
+    <table class="col-md-8">
+        <thead class="col-md-12">
+            <tr class="col-md-12">
+                <th colspan="2"><h4>Film Found</h4></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Title</th>
+                <td>{{films.Title}}</td>
+            </tr>
+            <tr>
+                <th>Year</th>
+                <td>{{films.Year}}</td>
+            </tr>
+            <tr>
+                <th>Actors</th>
+                <td>{{films.Actors}}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{films.Genre}}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{films.Type}}</td>
+            </tr>
+            <tr>
+                <th>Plot</th>
+                <td>{{films.Plot}}</td>
+            </tr>
+        </tbody>
+    </table>
 
 </div>
