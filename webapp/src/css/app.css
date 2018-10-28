@@ -1,0 +1,17 @@
+.header{
+    background-color: #0c5460;
+    color: #5bc0de;
+}
+
+.login{
+    margin-top: 10px;
+}
+
+.main{
+    margin-top: 10px;
+}
+
+.loginButton{
+    float:top;
+    margin-left: 10px;
+}

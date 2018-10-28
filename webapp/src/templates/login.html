@@ -1,0 +1,11 @@
+<div ng-controller="LoginCtrl" ng-init="restoreValues()">
+    <form ng-if="!userLogged.username" class="col-md-12 form-group login row">
+        <label for="username" class="col-md-6 text-right">Username</label><input id="username" type="text" ng-keyup="enableBtn(username, pass)" ng-model="username" class="col-md-3">
+        <label for="password" class="col-md-6 text-right">Password</label><input id="password"type="password" ng-keyup="enableBtn(username, pass)" ng-model="pass" class="col-md-3">
+        <button type="submit" ng-click="doLogin(username, pass)" class="btn btn-sm btn-light loginButton" ng-disabled="enableBtn(username, pass)">Entrar</button>
+    </form>
+    <div ng-if="userLogged.username">{{userLogged.username}}
+        <a href="#" ng-click="restoreValues()">Salir</a>
+    </div>
+
+</div>

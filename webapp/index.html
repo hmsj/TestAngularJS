@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>My AngularJS App</title>
+        <link rel="stylesheet" href="./src/css/app.css">
+        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap-grid.css">
+        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap-reboot.css">
+    </head>
+    <body ng-app="films">
+        <header class="header col-md-12 row">
+            <h1 class="col-md-6">Films</h1>
+            <div ng-include="'./src/templates/login.html'" class="col-md-6"></div>
+        </header>
+
+        <div ng-view></div>
+
+        <script src="./bower_components/angular/angular.js"></script>
+        <script src="./bower_components/angular-route/angular-route.js"></script>
+        <script src="./bower_components/ui-bootstrap/src/modal/modal.js"></script>
+
+        <script src="./app.js"></script>
+        <script src="./src/js/controllers/homeCtrl.js"></script>
+        <script src="./src/js/controllers/loginCtrl.js"></script>
+        <script src="./src/js/services/serviceFactory.js"></script>
+        <script src="./src/js/directives/listDirective.js"></script>
+    </body>
+</html>

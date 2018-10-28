@@ -1,0 +1,26 @@
+<div ng-app="films" class="main">
+    <div ng-controller="HomeCtrl">
+        <form ng-init=init()>
+            Titulo: <input type="text" ng-model="filmTitle"> 
+            Tipo:
+            <select>
+                <option ng-repeat="type in types" ng-model="filmType">{{type}}</option>
+            </select>
+            Año: <input type="text" maxlength="4" ng-model="filmYear" ng-keypress="isKeyAllowed($event)">
+            Argumento:
+            <select>
+                <option ng-repeat="plot in plotsLength" ng-model="filmPlot">{{plot}}</option>
+            </select>
+            <button type="submit" ng-click="buscarFilms()">Buscar</button>
+        </form>
+
+        <p>{{filmsFound[0].title}}</p>
+        <hr>
+        <div ng-show="filmsFound && filmsFound.imdbID">
+            <h3>Resultados</h3>
+            <film-details-list films="filmsFound"></film-details-list>
+        </div>
+    </div>
+
+</div>
+
